@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/quill": "^2.0.14",
+    "axios": "^1.11.0",
+    "quill": "^2.0.3",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
