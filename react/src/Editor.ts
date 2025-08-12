@@ -54,7 +54,7 @@ const Editor = forwardRef<Quill | null, EditorProps>(
       if (typeof ref === 'function') {
         ref(quill);
       } else if (ref) {
-        (ref as React.MutableRefObject<Quill | null>).current = quill;
+        (ref as React.RefObject<Quill | null>).current = quill;
       }
 
       if (defaultValueRef.current) {
@@ -78,7 +78,7 @@ const Editor = forwardRef<Quill | null, EditorProps>(
         if (typeof ref === 'function') {
           ref(null);
         } else if (ref) {
-          (ref as React.MutableRefObject<Quill | null>).current = null;
+          (ref as React.RefObject<Quill | null>).current = null;
         }
         container.innerHTML = '';
       };
