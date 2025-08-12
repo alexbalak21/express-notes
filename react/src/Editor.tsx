@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, forwardRef } from 'react';
+import  { useEffect, useRef, forwardRef } from 'react';
 import Quill from 'quill';
 import 'quill/dist/quill.snow.css';
 
@@ -19,24 +19,17 @@ const Editor = forwardRef<Quill, {}>((_, ref) => {
           ]
         }
       });
-      if (typeof ref === 'object' && ref !== null) {
-        ref.current = quillInstance;
-      }
+      ref.current = quillInstance;
     }
   }, [ref]);
 
   return (
-    <div className="card shadow-sm">
-      <div className="card-header bg-primary text-white">
-        Rich Text Editor
-      </div>
-      <div className="card-body">
-        <div
-          ref={editorRef}
-          className="form-control"
-          style={{ height: '200px', overflowY: 'auto' }}
-        />
-      </div>
+    <div>
+      <div
+        ref={editorRef}
+        className=""
+        style={{ height: '200px', overflowY: 'auto' }}
+      />
     </div>
   );
 });
