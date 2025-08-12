@@ -4,13 +4,6 @@ import Quill from 'quill';
 import 'quill/dist/quill.snow.css';
 import Editor from './Editor';
 
-const Delta = Quill.import('delta');
-
-interface RangeType {
-  index: number;
-  length: number;
-}
-
 interface DeltaOperation {
   insert?: string | object;
   delete?: number;
@@ -39,12 +32,7 @@ interface DeltaStatic {
   chop(): DeltaStatic;
 }
 
-interface TextChangeData {
-  delta: DeltaStatic;
-  oldDelta: DeltaStatic;
-  source: string;
-  ops?: DeltaOperation[];
-}
+
 
 const App: React.FC = () => {
   const quillRef = useRef<Quill | null>(null);
