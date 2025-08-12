@@ -7,6 +7,7 @@ import Editor from './Editor';
 
 
 
+
 const App: React.FC = () => {
   const quillRef = useRef<Quill | null>(null);
   const renderedOutputRef = useRef<HTMLDivElement>(null);
@@ -31,16 +32,7 @@ const App: React.FC = () => {
         <Editor ref={quillRef} />
         <button 
           onClick={handleGetContents}
-          style={{
-            marginTop: '10px',
-            padding: '8px 16px',
-            backgroundColor: '#4CAF50',
-            color: 'white',
-            border: 'none',
-            borderRadius: '4px',
-            cursor: 'pointer'
-          }}
-        >
+          className="btn btn-primary mt-2">
           Get Contents
         </button>
       </div>
