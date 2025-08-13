@@ -1,4 +1,4 @@
-export default function List_Group_Item() {
+export default function List_group_item() {
   return (
     <div
     className="list-group-item list-group-item-action py-3 lh-tight"

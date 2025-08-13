@@ -28,8 +28,8 @@ const App: React.FC = () => {
   };
 
   return (
-    <div style={{ maxWidth: '800px', margin: '0 auto', padding: '20px' }}>
-      <div style={{ marginBottom: '20px' }}>
+    <main className="row">
+      <div>
         <Editor ref={quillRef} />
         <button 
           onClick={handleGetContents}
@@ -37,45 +37,7 @@ const App: React.FC = () => {
           Get Contents
         </button>
       </div>
-      
-<div style={{ marginBottom: '20px' }}>
-        <h2>Rendered HTML</h2>
-        <div 
-          ref={renderedOutputRef}
-          style={{
-            border: '1px solid #ccc',
-            padding: '15px',
-            borderRadius: '4px',
-            minHeight: '50px',
-            backgroundColor: '#f8f9fa',
-            marginBottom: '10px'
-          }}
-        >
-          {/* Rendered HTML will appear here */}
-        </div>
-      </div>
-      
-      <div>
-        <h2>Raw HTML Source</h2>
-        <pre 
-          ref={rawOutputRef}
-          style={{
-            border: '1px solid #ccc',
-            padding: '15px',
-            borderRadius: '4px',
-            backgroundColor: '#f5f5f5',
-            whiteSpace: 'pre-wrap',
-            fontFamily: 'monospace',
-            minHeight: '50px',
-            overflowX: 'auto',
-            fontSize: '14px'
-          }}
-        >
-          {/* Raw HTML source will appear here */}
-        </pre>
-      </div>
-      <List_group/>
-    </div>
+    </main>
   );
 };
 

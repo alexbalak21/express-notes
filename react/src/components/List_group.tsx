@@ -1,4 +1,4 @@
-import List_Group_Item from './List_Group_Item'
+import List_group_item from './List_group_item'
 
 export default function List_group() {
   return (
@@ -8,9 +8,9 @@ export default function List_group() {
       <a className="btn btn-outline-dark"><i className="bi bi-arrow-bar-left"></i></a>
     </div>
     <div className="list-group list-group-flush border-bottom scrollarea bg-white">
-      <List_Group_Item/>
-      <List_Group_Item/>
-      <List_Group_Item/>
+      <List_group_item/>
+      <List_group_item/>
+      <List_group_item/>
     </div>
   </aside>
   )
