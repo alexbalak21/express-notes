@@ -5,6 +5,7 @@ import 'quill/dist/quill.snow.css';
 import Editor from './Editor';
 import List_group from './components/List_group';
 import SearchBar from './components/SearchBar';
+import TitleInput from './components/TitleInput';
 
 
 
@@ -30,12 +31,11 @@ const App: React.FC = () => {
 
   return (
     <main className="row w-100">
-      <aside className='col-3 p-0'>
+      <aside className='col-3 pe-1'>
         <List_group/>
       </aside>
-      <div className="col-9 p-0">
-        <SearchBar/>
-
+      <div className="col-9">
+        <TitleInput/>
         <Editor ref={quillRef} />
       
         <button 
