@@ -4,6 +4,7 @@ import Quill from 'quill';
 import 'quill/dist/quill.snow.css';
 import Editor from './Editor';
 import List_group from './components/List_group';
+import SearchBar from './components/SearchBar';
 
 
 
@@ -33,6 +34,7 @@ const App: React.FC = () => {
         <List_group/>
       </aside>
       <div className="col-9">
+        <SearchBar/>
         <Editor ref={quillRef} />
         <button 
           onClick={handleGetContents}
