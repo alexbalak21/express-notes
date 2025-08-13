@@ -33,9 +33,11 @@ const App: React.FC = () => {
       <aside className='col-3 p-0'>
         <List_group/>
       </aside>
-      <div className="col-9 p-1">
+      <div className="col-9 p-0">
         <SearchBar/>
+
         <Editor ref={quillRef} />
+      
         <button 
           onClick={handleGetContents}
           className="btn btn-primary mt-2">
