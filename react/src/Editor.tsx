@@ -24,13 +24,7 @@ const Editor = forwardRef<Quill, {}>((_, ref) => {
   }, [ref]);
 
   return (
-    <div>
-      <div
-        ref={editorRef}
-        className=""
-        style={{ height: '200px', overflowY: 'auto' }}
-      />
-    </div>
+      <div ref={editorRef} className="" style={{ height: '200px', overflowY: 'auto' }}/>
   );
 });
 

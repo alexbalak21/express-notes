@@ -29,11 +29,11 @@ const App: React.FC = () => {
   };
 
   return (
-    <main className="row">
-      <aside className='col-3'>
+    <main className="row w-100">
+      <aside className='col-3 p-0'>
         <List_group/>
       </aside>
-      <div className="col-9">
+      <div className="col-9 p-1">
         <SearchBar/>
         <Editor ref={quillRef} />
         <button 
