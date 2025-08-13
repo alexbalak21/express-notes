@@ -29,7 +29,10 @@ const App: React.FC = () => {
 
   return (
     <main className="row">
-      <div>
+      <aside className='col-3'>
+        <List_group/>
+      </aside>
+      <div className="col-9">
         <Editor ref={quillRef} />
         <button 
           onClick={handleGetContents}
